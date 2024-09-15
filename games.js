@@ -11,7 +11,7 @@ var game1 = {
     Price: "0",
     Age: "0",
     Rating: "3",
-    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button><h4 class="game_title_games">Among Us</h4><img src="Amongus Media/Amongus Display Image.jpeg" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity:</h4><span>2 Stars</span><br><br><h5>Price: Free</h5><br><a href="amongus_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
+    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button><h4 class="game_title_games">Among Us</h4><img src="Amongus Display Image.jpeg" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity:</h4><span>2 Stars</span><br><br><h5>Price: Free</h5><br><a href="amongus_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
 };
 
 
@@ -20,7 +20,7 @@ var game2 = {
     Price: "0",
     Age: "15",
     Rating: "4",
-    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button><h4 class="game_title_games">Fortnite</h4><img src="Fortnite Media/Fortnite Display Image.jpeg" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity: </h4><span>3 Stars</span><br><br><h5>Price: Free</h5><br><a href="fortnite_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
+    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button><h4 class="game_title_games">Fortnite</h4><img src="Fortnite Display Image.jpeg" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity: </h4><span>3 Stars</span><br><br><h5>Price: Free</h5><br><a href="fortnite_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
 };
 
 var game3 = {
@@ -28,7 +28,7 @@ var game3 = {
     Price: "39",
     Age: "0",
     Rating: "5",
-    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button><h4 class="game_title_games">EA FC 24</h4><img src="FC24 Media/FC24 Display Image.jpg" class="game_disp_img" ></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity:</h5><span>2 Stars</span><br><br><h5>Price: $39.00</h5><br><a href="fc24_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
+    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button><h4 class="game_title_games">EA FC 24</h4><img src="FC24 Display Image.jpg" class="game_disp_img" ></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity:</h5><span>2 Stars</span><br><br><h5>Price: $39.00</h5><br><a href="fc24_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
 };
 
 var game4 = {
@@ -36,7 +36,7 @@ var game4 = {
     Price: "0",
     Age: "0",
     Rating: "2",
-    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button><h4 class="game_title_games">Asphalt 9</h4><img src="Asphalt9 Media/Asphalt Display Image.jpeg" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity: </h5><span>3 Stars</span><br><br><h5>Price: $39.00</h5><br><a href="asphalt9_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
+    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button><h4 class="game_title_games">Asphalt 9</h4><img src="Asphalt Display Image.jpeg" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity: </h5><span>3 Stars</span><br><br><h5>Price: $39.00</h5><br><a href="asphalt9_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
 };
 
 var game5 = {
@@ -44,7 +44,7 @@ var game5 = {
     Price: "124",
     Age: "15",
     Rating: "4.5",
-    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button><h4 class="col-12 game_title_games" style="margin-left: -10%;">God of War Ragnarok</h4><img src="God of War/Display.jpg" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5 style="margin-top: 8%;">Popularity: </h5><span>2 Stars</span><br><br><h5>Price: $124.95</h5><br><a href="ragnarok_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
+    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button><h4 class="col-12 game_title_games" style="margin-left: -10%;">God of War Ragnarok</h4><img src="Ragnarok Display.jpg" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5 style="margin-top: 8%;">Popularity: </h5><span>2 Stars</span><br><br><h5>Price: $124.95</h5><br><a href="ragnarok_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
 };
 
 var game6 = {
@@ -52,7 +52,7 @@ var game6 = {
     Price: "59.99",
     Age: "15",
     Rating: "4.5",
-    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button><h4 class="col-12 game_title_games">Elden Ring</h4><img src="Elden Media/Display.webp" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center;" class="col-6"><h5 style="margin-top: 8%;">Popularity: </h5><span>2 Stars</span><br><br><h5>Price: $59.99</h5><br><a href="elden_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
+    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button><h4 class="col-12 game_title_games">Elden Ring</h4><img src="Elden Display.webp" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center;" class="col-6"><h5 style="margin-top: 8%;">Popularity: </h5><span>2 Stars</span><br><br><h5>Price: $59.99</h5><br><a href="elden_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
 };
 
 var game7 = {
@@ -60,7 +60,7 @@ var game7 = {
     Price: "124",
     Age: "15",
     Rating: "4.5",
-    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button><h4 class="col-12 game_title_games" style="margin-left: -10%;">Red Dead Redemption 2</h4><img src="RDR2 Media/Display.avif" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center;" class="col-6"><h5 style="margin-top: 25%;">Popularity: </h5><span>2 Stars</span><br><br><h5>Price: $90.95</h5><br><a href="rdr2_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
+    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn"><i class="fa fa-heart-o" aria-hidden="true"></i></button><h4 class="col-12 game_title_games" style="margin-left: -10%;">Red Dead Redemption 2</h4><img src="RDR2 Display.avif" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center;" class="col-6"><h5 style="margin-top: 25%;">Popularity: </h5><span>2 Stars</span><br><br><h5>Price: $90.95</h5><br><a href="rdr2_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
 };
 
 var all_games = [game0, game1, game2, game3, game4, game5, game6, game7];
