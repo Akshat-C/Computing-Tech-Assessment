@@ -23,7 +23,8 @@ const firebaseConfig = {
 function authenticate_user()
 {
     email = document.getElementById("login_email").value;
-    email = email.replace(/./g, ",")
+    email = email.replace(".", ",")
+    console.log(email);
     password = document.getElementById("login_password").value;
 
     let email_ref = firebase.database().ref('User_credentials/');

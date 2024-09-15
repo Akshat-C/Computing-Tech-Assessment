@@ -54,6 +54,7 @@ if (localStorage.getItem("Authenticated") == "yes")
           password_ref.once('value', function(db_pw) {
             if (db_pw.exists()) {
                 password = db_pw.val();
+                new_password = password;
                 console.log(password);            
             } else 
               {
