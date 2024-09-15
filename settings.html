@@ -1,0 +1,83 @@
+<html> 
+    
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>GameNet</title>
+
+    <script src="main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script>
+    <script src="settings.js"></script>
+
+</head>
+
+<body onload="check_auth()">
+
+<div class="col-12" id="header">
+
+<h1 id="logo">GameNet</h1>
+<ul class="col-sm-5 col-md-6 col-lg-7" id="main_nav">
+    <li id="home_tab" class="top_nav no_dropdown"><a onclick="prompt(this)" id="index.html">Home</a></li>
+    <li id="games_tab" class="top_nav no_dropdown"><a onclick="prompt(this)" id="games.html">Games</a></li>
+    <li id="login_tab" class="top_nav no_dropdown"><a onclick="prompt(this)" id="login.html">Login</a></li>
+    <li id="signup_tab" class="top_nav no_dropdown"><a onclick="prompt(this)" id="signup.html">Sign Up</a></li>
+    
+    <div class="dropdown">
+        <li id="settings_tab" class="active top_nav"><a href="settings.html" style="display: inline-block;">Settings&nbsp;<span class="fa fa-caret-down" style="margin-top: 5%;"></span></a></li>
+        <div class="dropdown-content">
+          <a onclick="prompt(this)" id="accessibility.html">Accessibility</a>
+          <a onclick="prompt(this)" id="contact_us.html">Contact Us</a>
+          <a onclick="prompt(this)" id="about.html">About</a>
+        </div>
+      </div> 
+    <div class="dropdown">
+        <li id="account_tab" class="top_nav no_dropdown"><a href="settings.html" style="display: inline-block;">Account&nbsp;<span class="fa fa-caret-down" style="margin-top: 5%;"></span></a></li>
+        <div class="dropdown-content">
+          <a onclick="prompt(this)" id="settings.html">Basic Settings</a>
+          <a onclick="prompt(this)" id="preferences.html">Preferences</a>
+          <a onclick="prompt(this)" id="your_games.html">Your Games</a>
+        </div>
+      </div> 
+    </ul>
+
+</div>
+
+<div class="row col-12">
+
+
+
+<div class="col-12" style="float: right; text-align: left; margin-left: 1%; margin-top: 1%; padding-top: 5%;" id="settings_div">
+<h3 class="setting_descriptor">Basic Details</h3>
+<span class="setting_desc">Username:&nbsp;&nbsp;&nbsp;</span><input id="username_inp" type="text" placeholder="John@123" value="" style="width: 65%; font-size: 18px; padding-left: 1%; border-radius: 15px;" class="btn-outline-secondary profile_inp"><br><br>
+<span class="setting_desc">Email:&nbsp;&nbsp;&nbsp;</span><input id="email_inp" type="text" placeholder="johndoe123@gmail.com" value="" style="width: 65%; font-size: 18px; padding-left: 1%; border-radius: 15px; margin-left: 4%; " class="btn-outline-secondary profile_inp"><br><br>
+<h3 class="setting_descriptor">Update Password: </h3><br>
+<span class="setting_desk">Current Password:&nbsp;&nbsp;&nbsp;</span><input id="pw_inp" type="password" placeholder="" style="width: 65%; font-size: 18px; padding-left: 1%; border-radius: 15px; margin-left: 3.5%; " class="btn-outline-secondary profile_inp"><br><br>
+<span class="setting_desk">New Password:</span><input id="new_pw_inp" type="password" placeholder="" style="width: 65%; font-size: 18px; padding-left: 1%; border-radius: 15px; margin-left: 7.75%;" class="btn-outline-secondary profile_inp"><br><br>
+<span class="setting_desk">Confirm New Password:&nbsp;&nbsp;&nbsp;</span><input id="re_pw_inp" type="password" placeholder="" style="width: 65%; font-size: 18px; padding-left: 1%; border-radius: 15px; margin-left: -1.2%;" class="btn-outline-secondary profile_inp"><br><br>
+<button id="settings_save" class="btn btn-danger" onclick="save_changes()">Save Changes</button><br><br>
+<div class="alert alert-danger alert-dismissible fade show col-6" style="margin-left: 10%; display: none;" id="alert">
+    You have unsaved changes.
+    <button class="btn btn-danger">Leave without Saving</button>
+</div>
+<div class="alert alert-success alert-dismissible fade show col-6" style="margin-left: 10%; display: none;" id="success">Your changes have been saved.</div>
+</div>
+
+</div>
+
+<div class="col-12" style="margin-left: 3%; margin-top: 1%; padding-top: 5%; text-align: center; display: none;" id="account_prompt">
+    <h2>You must be signed in to change and view your account settings.</h2><br>
+    <button class="btn btn-light">Create a New Account</button>
+    <button class="btn btn-success">Login to Existing Account</button>
+</div>
+
+</div>
+
+</body>
+
+</html>
