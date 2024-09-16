@@ -3,8 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 body {
     background-color: #b4b4b4;
+    background-image: url("Triangle\ Purple.png");
     padding-bottom: 5%;
     width: 100vw;
     margin: 0;
@@ -76,6 +80,16 @@ body {
     padding-left: 1.5%;
     background-color: #0a3880;
   }
+
+  
+.top_nav:hover {
+    transform: scale(1.5);
+    padding-bottom: 1.5%;
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+    background-color: #0a3880;
+}
+
 
 
 a {
@@ -192,6 +206,16 @@ a {
     font-size: 24px;
 }
 
+#settings_div {
+    text-align: left; 
+    margin-left: 1%; 
+    margin-top: 1%; 
+    padding-top: 5%;
+    background-color: #a5cff9;
+    padding: 5%;
+    border-radius: 20px;
+}
+
 /*hr {
     border: 2px solid lightslategray;
     margin-right: 10%;
@@ -219,7 +243,13 @@ a {
         height: fit-content;
         color: #FFFFF0;
         font-family: "Prompt";
+        border-radius: 20px;
         /*#cde8ff*/
+}
+
+.game_disp:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 5px #212121;
 }
 
 .game_title_games {
@@ -245,8 +275,7 @@ a {
 .setting_desk {
     font-size: 150%;
     font-weight: bold;
-
-    }
+}
 .setting_descriptor {
     font-weight: bold;
     font-size: 225%;
@@ -270,9 +299,10 @@ a {
 #game_detail_info {
     margin-left: 10%; 
     margin-top: 2%; 
-    background-color: #2196F3; 
+    background-color: #3860c4; 
     color: #e6e6e6;
     padding-top: 2%;
+    border-radius: 20px;
 }
 
 #game_detail_nav {
@@ -284,11 +314,15 @@ a {
 }
 
 #media_display {
-    margin-left: 5%; margin-top: 5%; background-color: #3282B8; padding: 2%;
+    margin-left: 5%; 
+    margin-top: 5%; 
+    background-color: #6f7276; 
+    border-radius: 20px;
 }
 
 .game_detail_text {
     margin-left: 5%;
+    font-family: "Kanit";
 }
 
 .nav-link {
@@ -314,10 +348,15 @@ h2 {
 
 #description {
     margin-top: -7.5%;
+    
 }
 
-#hardware_requirements {
-    margin-top: -7.5%;
+
+#description, #hardware_requirements, #popularity {
+    font-family: "Outfit";
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+    padding-bottom: 10%;
 }
 
 .description_text {
@@ -344,19 +383,13 @@ font-style: italic;
 
 #hardware_requirements {
 font-size: 100%;
+margin-top: -17%;
 }
 
-.redirection_btn {
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #0D47A1;
-    border: solid #0D47A1;
-    color: #e6e6e6;
-}
-
-.review_element {
-    padding: 2%;
+#review_disp {
     background-color: #aaccec;
+    padding: 2%;
+    border-radius: 20px;
 }
 
 .review_rating, .review_date, .review_desc {
@@ -370,6 +403,15 @@ font-size: 100%;
 .review_desc {
     font-size: 16px;
 }
+
+.redirection_btn {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #0D47A1;
+    border: solid #0D47A1;
+    color: #e6e6e6;
+}
+
 
 
 

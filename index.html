@@ -24,7 +24,7 @@
     <li id="login_tab" class="top_nav" ><a href="login.html">Login</a></li>
     <li id="signup_tab" class="top_nav"><a href="signup.html">Sign Up</a></li>
     <div class="dropdown">
-        <li id="settings_tab" class="active top_nav"><a href="settings.html" style="display: inline-block;">Settings&nbsp;<span class="fa fa-caret-down" style="margin-top: 5%;"></span></a></li>
+        <li id="settings_tab" class=""><a href="" style="display: inline-block;">Settings&nbsp;<span class="fa fa-caret-down" style="margin-top: 5%;"></span></a></li>
         <div class="dropdown-content">
           <a href="#">Accessibility</a>
           <a href="contact_us.html">Contact Us</a>
@@ -32,7 +32,7 @@
         </div>
       </div> 
     <div class="dropdown">
-        <li id="account_tab" class="top_nav no_dropdown"><a href="settings.html" style="display: inline-block;">Account&nbsp;<span class="fa fa-caret-down" style="margin-top: 5%;"></span></a></li>
+        <li id="account_tab" class="no_dropdown"><a href="" style="display: inline-block;">Account&nbsp;<span class="fa fa-caret-down" style="margin-top: 5%;"></span></a></li>
         <div class="dropdown-content">
           <a href="settings.html">Basic Settings</a>
           <a href="preferences.html">Preferences</a>
@@ -43,7 +43,7 @@
 
 </div>
 
-<div>
+<!--<div>
 
     <ul class="col-12" id="franchise">
         <span id="desc">Browse By Franchise: </span>
@@ -54,18 +54,18 @@
         <li id="more" class="franchise_tab">And More...</li>
     </ul>
 
-</div>
+</div>--><br>
 
-<div style="background-color: #37474F;">
-    
-<div class="col-8 justify-content-center mx-auto" style="background-color: #37474F;">
-    <br><h1 style="color: white;">Trending Now</h1><br>
+<div style="background-color: #74b0f5; margin-left: 5%; margin-right: 5%; padding-top: 1%; border-radius: 20px;">
+    <!--style="background-color: #37474F;"-->
+<div class="col-8 justify-content-center mx-auto">
+    <h1 style="color: white;">Trending Now</h1>
 <div id="home_carousel" class="carousel" data-bs-ride="carousel" data-bs-interval="3500"> 
     
     <div class="carousel-inner" style="height: fit-content;"> 
 
-        <div class="carousel-item active ratio ratio-16x9">
-            <img src="Minecraft_Carousel.avif" alt="" class="home_img">
+        <div class="carousel-item active ratio ratio-16x9" style="z-index: 1;">
+            <img src="Minecraft_Carousel.avif" alt="" class="home_img" style="z-index: 1;">
         </div>
 
     <div class="carousel-item ratio ratio-16x9">
@@ -80,7 +80,11 @@
         <img src="FC24_Carousel.jpg" class="home_img">
     </div>
 
+    <button type="button" data-bs-target="#home_carousel" data-bs-slide="prev" style="display: inline-block; background-color: aquamarine; opacity: 100%; color: black; padding: 0; z-index: 2;"><span class="carousel-control-prev-icon" style="opacity: 100%;"></span></button>
+    <button type="button" data-bs-target="#home_carousel" data-bs-slide="next" style="display: inline-block; background-color: aquamarine; opacity: 100%; color: black; padding: 0; z-index: 2;"><span class="carousel-control-next-icon"></span></button>
+
     </div><br><br>
+    
 
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#home_carousel" data-bs-slide-to="0" class="active"></button>
@@ -88,9 +92,6 @@
         <button type="button" data-bs-target="#home_carousel" data-bs-slide-to="2"></button>
         <button type="button" data-bs-target="#home_carousel" data-bs-slide-to="3"></button>
     </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#home_carousel" data-bs-slide="prev" style="display: inline-block"><span class="carousel-control-prev-icon"></span></button>
-    <button class="carousel-control-next" type="button" data-bs-target="#home_carousel" data-bs-slide="next" style="display: inline-block;"><span class="carousel-control-next-icon"></span></button>
 
     </div>
 </div>

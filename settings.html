@@ -48,18 +48,18 @@
 
 </div>
 
-<div class="row col-12">
+<div class="container col-12">
 
 
 
-<div class="col-12" style="float: right; text-align: left; margin-left: 1%; margin-top: 1%; padding-top: 5%;" id="settings_div">
-<h3 class="setting_descriptor">Basic Details</h3>
-<span class="setting_desc">Username:&nbsp;&nbsp;&nbsp;</span><input id="username_inp" type="text" placeholder="John@123" value="" style="width: 65%; font-size: 18px; padding-left: 1%; border-radius: 15px;" class="btn-outline-secondary profile_inp"><br><br>
-<span class="setting_desc">Email:&nbsp;&nbsp;&nbsp;</span><input id="email_inp" type="text" placeholder="johndoe123@gmail.com" value="" style="width: 65%; font-size: 18px; padding-left: 1%; border-radius: 15px; margin-left: 4%; " class="btn-outline-secondary profile_inp"><br><br>
-<h3 class="setting_descriptor">Update Password: </h3><br>
-<span class="setting_desk">Current Password:&nbsp;&nbsp;&nbsp;</span><input id="pw_inp" type="password" placeholder="" style="width: 65%; font-size: 18px; padding-left: 1%; border-radius: 15px; margin-left: 3.5%; " class="btn-outline-secondary profile_inp"><br><br>
-<span class="setting_desk">New Password:</span><input id="new_pw_inp" type="password" placeholder="" style="width: 65%; font-size: 18px; padding-left: 1%; border-radius: 15px; margin-left: 7.75%;" class="btn-outline-secondary profile_inp"><br><br>
-<span class="setting_desk">Confirm New Password:&nbsp;&nbsp;&nbsp;</span><input id="re_pw_inp" type="password" placeholder="" style="width: 65%; font-size: 18px; padding-left: 1%; border-radius: 15px; margin-left: -1.2%;" class="btn-outline-secondary profile_inp"><br><br>
+<div class="col-12" id="settings_div">
+<h3 class="setting_descriptor">Basic Details: </h3><hr>
+<div class="col-12"><span class="setting_desc">Username: </span><input id="username_inp" class="col-md-8 col-6" type="text" placeholder="John@123" value="" style="font-size: 18px; padding-left: 1%; border-radius: 15px; position: relative; left: 12%;" class="btn-outline-secondary profile_inp"><br><br></div>
+<div class="col-12"><span class="setting_desc">Email: </span><input id="email_inp" class="col-md-8 col-6" type="text" placeholder="johndoe123@gmail.com" value="" style="font-size: 18px; padding-left: 1%; border-radius: 15px; position: relative; left: 16%;" class="btn-outline-secondary profile_inp"><br><br></div>
+<h3 class="setting_descriptor">Update Password: </h3><hr>
+<div class="col-12"><span class="setting_desk">Current Password: </span><input id="pw_inp" class="col-lg-8 col-6" type="password" placeholder="" style="font-size: 18px; padding-left: 1%; border-radius: 15px; position: relative; left: 5%;" class="btn-outline-secondary profile_inp"><br><br></div>
+<div class="col-12"></div><span class="setting_desk">New Password: </span><input id="new_pw_inp" class="col-lg-8 col-6" type="password" placeholder="" style="font-size: 18px; padding-left: 1%; border-radius: 15px; position: relative; left: 8%;" class="btn-outline-secondary profile_inp"><br><br>
+<div class="col-12"><span class="setting_desk">Confirm New Password: </span><input id="re_pw_inp" class="col-lg-8 col-6" type="password" placeholder="" style="font-size: 18px; padding-left: 1%; border-radius: 15px;" class="btn-outline-secondary profile_inp"><br><br></div>
 <button id="settings_save" class="btn btn-danger" onclick="save_changes()">Save Changes</button><br><br>
 <div class="alert alert-danger alert-dismissible fade show col-6" style="margin-left: 10%; display: none;" id="alert">
     You have unsaved changes.
