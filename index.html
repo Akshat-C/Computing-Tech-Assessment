@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="main.js"></script>
+    <script defer src="interactive.js"></script>
     <title>GameNet</title>
 
 </head>
@@ -55,46 +56,19 @@
     </ul>
 
 </div>--><br>
-
-<div style="background-color: #74b0f5; margin-left: 5%; margin-right: 5%; padding-top: 1%; border-radius: 20px;">
-    <!--style="background-color: #37474F;"-->
-<div class="col-8 justify-content-center mx-auto">
-    <h1 style="color: white;">Trending Now</h1>
-<div id="home_carousel" class="carousel" data-bs-ride="carousel" data-bs-interval="3500"> 
-    
-    <div class="carousel-inner" style="height: fit-content;"> 
-
-        <div class="carousel-item active ratio ratio-16x9" style="z-index: 1;">
-            <img src="Minecraft_Carousel.avif" alt="" class="home_img" style="z-index: 1;">
-        </div>
-
-    <div class="carousel-item ratio ratio-16x9">
-        <img src="Asphalt9_Carousel.jpg" alt="" class="home_img">
+<div class="justify-content-center mx-auto">
+  <h1 style="margin-left: 40vw;">Trending Now</h1>
+  <br>
+    <div class="marquee">
+        <ul class="marquee-content">
+            <li><a href="game_detail.html"><img src="Minecraft_Carousel.avif" alt="Image 1"></a></li>
+            <li><a href="asphalt9_detail.html"><img src="Asphalt9_Carousel.jpg" alt="Image 2"></a></li>
+            <li><a href="fc24_detail.html"><img src="FC24_Carousel.jpg" alt="Image 3"></a></li>
+            <li><a href="fortnite_detail.html"><img src="Fortnite_Carousel.jpg" alt="Image 4"></a></li>
+            <li><a href="rdr2_detail.html"><img src="RDR2 Carousel.jpg" alt="Image 5"></a></li>
+            <!-- Add more images as needed -->
+        </ul>
     </div>
-
-    <div class="carousel-item">
-        <img src="Fortnite_Carousel.jpg" alt="" class="home_img">
-    </div>
-
-    <div class="carousel-item">
-        <img src="FC24_Carousel.jpg" class="home_img">
-    </div>
-
-    <button type="button" data-bs-target="#home_carousel" data-bs-slide="prev" style="display: inline-block; background-color: aquamarine; opacity: 100%; color: black; padding: 0; z-index: 2;"><span class="carousel-control-prev-icon" style="opacity: 100%;"></span></button>
-    <button type="button" data-bs-target="#home_carousel" data-bs-slide="next" style="display: inline-block; background-color: aquamarine; opacity: 100%; color: black; padding: 0; z-index: 2;"><span class="carousel-control-next-icon"></span></button>
-
-    </div><br><br>
-    
-
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#home_carousel" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#home_carousel" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#home_carousel" data-bs-slide-to="2"></button>
-        <button type="button" data-bs-target="#home_carousel" data-bs-slide-to="3"></button>
-    </div>
-
-    </div>
-</div>
 </div>
 
 </body>

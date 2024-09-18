@@ -47,17 +47,17 @@
 
 </div>
 
-<div class="row">
+<div class="row" style="padding-top: 2%; padding-left: 5%; padding-right: 5%;">
 
-<div class="col-12" style="float: right; text-align: center; margin-left: 1%; margin-top: 1%; padding-top: 5%;" id="preferences_div">
+<div class="col-12" style="text-align: center; padding-top: 5%; background-color: #89adf6; border-radius: 20px; color:rgb(33, 67, 126);" id="preferences_div">
 
-<h2>Preferences</h2><br>
+<h1 id="pref_title">Preferences</h1><br>
 <p class="preference_text">Tell us your favourite game genre, franchise and desired price range so we can recommend the best games for you.</p><br>
-<span class="setting_desc">Username:&nbsp;&nbsp;&nbsp;</span><input id="username_inp" type="text" placeholder="John@123" style="width: 65%; font-size: 18px; padding-left: 1%; border-radius: 15px; margin-right: -5%" class="btn-outline-secondary profile_inp"><br><br>
+<span class="setting_desc">Username:&nbsp;&nbsp;&nbsp;</span><input id="username_inp" class="col-6" type="text" placeholder="John@123" style="font-size: 18px; padding-left: 1%; border-radius: 15px;" class="btn-outline-secondary profile_inp"><br>
 <span class="setting_desc" id="dob">Date of Birth:&nbsp;&nbsp;&nbsp;<input type="date" id="dob_inp"></span><br><br>
 <span class="setting_desc">Preferred Price:&nbsp;&nbsp;&nbsp;</span><button id="btn_f" class="btn btn-primary" onclick="price_f()">Free</button>&nbsp;<button id="btn_3" class="btn btn-primary" onclick="price_3()">&lt;$30.00</button>&nbsp;<button id="btn_5" class="btn btn-primary" onclick="price_5()">&lt;$50.00</button>&nbsp;<button id="btn_8" class="btn btn-primary" onclick="price_8()">&lt;$80.00</button>&nbsp;<button id="btn_n" class="btn btn-primary" onclick="price_n()">None</button><br><br>
 <span class="setting_desc">Preferred Genre:&nbsp;</span><button class="btn btn-info" onclick="genre(this)" id="action">Action</button>&nbsp;<button class="btn btn-info" onclick="genre(this)" id="adventure">Adventure</button>&nbsp;<button class="btn btn-info" onclick="genre(this)" id="racing">Racing</button>&nbsp;<button class="btn btn-info" onclick="genre(this)" id="shooter">Shooter</button>&nbsp;<button class="btn btn-info" onclick="genre(this)" id="none">None</button><br><br>
-<button id="settings_save" class="btn btn-success" onclick="add_preferences()">Save Changes</button><br><br>
+<button id="settings_save" class="btn btn-success col-2" onclick="add_preferences()">Save Changes</button><br><br>
 <div class="alert alert-warning alert-dismissible fade show" style="margin-left: 10%; display: none;" id="alert">
     Please choose these preferences to receive the complete GameNet experience. 
 </div>

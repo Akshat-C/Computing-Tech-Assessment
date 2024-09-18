@@ -94,6 +94,8 @@ function star5()
     reviewDetails.Rating = 5;
 }
 
+var avgRef = database.ref(current_page + "/" + "Avg_Rating");
+
   function write_review()
   {
     if ((localStorage.getItem("Authenticated") == "yes") && (reviewDetails.Rating >= 1))
@@ -105,7 +107,8 @@ function star5()
         reviewDetails.Date = currentDate.getDate().toString() + "-" + (currentDate.getMonth() + 1).toString() + "-" + currentDate.getFullYear().toString();
 
         let reviewRef = database.ref(current_page + "/" + username + "/");
-        reviewRef.set(reviewDetails)
+        reviewRef.set(reviewDetails);
+        avgRef.set(null)
         .then(() => {
         console.log('Review added successfully');
         document.getElementById("review_success").style.display = "block";
@@ -180,6 +183,7 @@ function fetchReviews()
 
   if (avg_rating > 0 && avg_rating <= 5)
   {
+    avgRef.set(avg_rating);
     document.getElementById("avg_rating").innerHTML = avg_rating;
   }
   }, function(error) {

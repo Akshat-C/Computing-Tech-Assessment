@@ -14,68 +14,76 @@ const firebaseConfig = {
   const database = firebase.database(app);
 
 var game0 = {
+    Title: "Minecraft",
     Genre: "adventure",
     Price: "39",
     Age: "10",
     Rating: "4",
-    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="Minecraft"></button><h4 class="game_title_games">Minecraft</h4><img src="Minecraft Display Image.jpeg" class="game_disp_img"><br></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity:</h5><span>3 Stars</span><br><br><h5>Price: $39.00</h5><br><a href="game_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
+    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="Minecraft"></button><h4 class="game_title_games">Minecraft</h4><img src="Minecraft Display Image.jpeg" class="game_disp_img"><br></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity:</h5><span id="Minecraft_rating">No Reviews Yet</span><br><br><h5>Price: $39.00</h5><br><a href="game_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
 };
 
 var game1 = {
+    Title: "Amongus",
     Genre: "other",
     Price: "0",
     Age: "0",
     Rating: "3",
-    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="Amongus"></button><h4 class="game_title_games">Among Us</h4><img src="Amongus Display Image.jpeg" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity:</h4><span>2 Stars</span><br><br><h5>Price: Free</h5><br><a href="amongus_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
+    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="Amongus"></button><h4 class="game_title_games">Among Us</h4><img src="Amongus Display Image.jpeg" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity:</h4><span id="Amongus_rating">No Reviews Yet</span><br><br><h5>Price: Free</h5><br><a href="amongus_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
 };
 
 
 var game2 = {
+    Title: "Fortnite",
     Genre: "shooter",
     Price: "0",
     Age: "15",
     Rating: "4",
-    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="Fortnite"></button><h4 class="game_title_games">Fortnite</h4><img src="Fortnite Display Image.jpeg" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity: </h4><span>3 Stars</span><br><br><h5>Price: Free</h5><br><a href="fortnite_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
+    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="Fortnite"></button><h4 class="game_title_games">Fortnite</h4><img src="Fortnite Display Image.jpeg" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity: </h4><span id="Fortnite_rating">No Reviews Yet</span><br><br><h5>Price: Free</h5><br><a href="fortnite_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
 };
 
 var game3 = {
+    Title: "FC24",
     Genre: "sport",
     Price: "39",
     Age: "0",
     Rating: "5",
-    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn" onclick="favourite(this)" id="FC24"><i class="fa fa-heart-o" aria-hidden="true"></i></button><h4 class="game_title_games">EA FC 24</h4><img src="FC24 Display Image.jpg" class="game_disp_img" ></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity:</h5><span>2 Stars</span><br><br><h5>Price: $39.00</h5><br><a href="fc24_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
+    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn" onclick="favourite(this)" id="FC24"><i class="fa fa-heart-o" aria-hidden="true"></i></button><h4 class="game_title_games">EA FC 24</h4><img src="FC24 Display Image.jpg" class="game_disp_img" ></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity:</h5><span id="FC24_rating">No Reviews Yet</span><br><br><h5>Price: $39.00</h5><br><a href="fc24_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
 };
 
 var game4 = {
+    Title: "Asphalt9",
     Genre: "racing",
     Price: "0",
     Age: "0",
     Rating: "2",
-    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="Asphalt9"></button><h4 class="game_title_games">Asphalt 9</h4><img src="Asphalt Display Image.jpeg" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity: </h5><span>3 Stars</span><br><br><h5>Price: $39.00</h5><br><a href="asphalt9_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
+    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="Asphalt9"></button><h4 class="game_title_games">Asphalt 9</h4><img src="Asphalt Display Image.jpeg" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5>Popularity: </h5><span id="Asphalt9_rating">No Reviews Yet</span><br><br><h5>Price: $39.00</h5><br><a href="asphalt9_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
 };
 
 var game5 = {
+    Title: "Ragnarok",
     Genre: "action",
     Price: "124",
     Age: "15",
     Rating: "4.5",
-    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="Ragnarok"></button><h4 class="col-12 game_title_games" style="margin-left: -10%;">God of War Ragnarok</h4><img src="Ragnarok Display.jpg" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5 style="margin-top: 8%;">Popularity: </h5><span>2 Stars</span><br><br><h5>Price: $124.95</h5><br><a href="ragnarok_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
+    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="Ragnarok"></button><h4 class="col-12 game_title_games" style="margin-left: -10%;">God of War Ragnarok</h4><img src="Ragnarok Display.jpg" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6"><h5 style="margin-top: 8%;">Popularity: </h5><span id="Ragnarok_rating">No Reviews Yet</span><br><br><h5>Price: $124.95</h5><br><a href="ragnarok_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
 };
 
 var game6 = {
+    Title: "Elden",
     Genre: "adventure",
     Price: "59.99",
     Age: "15",
     Rating: "4.5",
-    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="Elden"></button><h4 class="col-12 game_title_games">Elden Ring</h4><img src="Elden Display.webp" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center;" class="col-6"><h5 style="margin-top: 8%;">Popularity: </h5><span>2 Stars</span><br><br><h5>Price: $59.99</h5><br><a href="elden_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
+    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="Elden"></button><h4 class="col-12 game_title_games">Elden Ring</h4><img src="Elden Display.webp" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center;" class="col-6"><h5 style="margin-top: 8%;">Popularity: </h5><span id="Elden_rating">No Reviews Yet</span><br><br><h5>Price: $59.99</h5><br><a href="elden_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
 };
 
 var game7 = {
+    Title: "RDR2",
     Genre: "action",
     Price: "124",
     Age: "15",
     Rating: "4.5",
-    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="RDR2"></button><h4 class="col-12 game_title_games" style="margin-left: -10%;">Red Dead Redemption 2</h4><img src="RDR2 Display.avif" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center;" class="col-6"><h5 style="margin-top: 25%;">Popularity: </h5><span>2 Stars</span><br><br><h5>Price: $90.95</h5><br><a href="rdr2_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
+    Data: '<div style="float: left;" class="col-6"><button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="RDR2"></button><h4 class="col-12 game_title_games" style="margin-left: -10%;">Red Dead Redemption 2</h4><img src="RDR2 Display.avif" class="game_disp_img"></div><div style="float: right; padding-top: 5%; text-align: center;" class="col-6"><h5 style="margin-top: 25%;">Popularity: </h5><span id="RDR2_rating">No Reviews Yet</span><br><br><h5>Price: $90.95</h5><br><a href="rdr2_detail.html"><button class="btn btn-primary">View Game</button></a></div>'
 };
 
 var all_games = [game0, game1, game2, game3, game4, game5, game6, game7];
@@ -94,6 +102,7 @@ function show_all()
                 if (disp_div) 
                 { 
                     disp_div.innerHTML = all_games[i].Data;
+                    fetch_ratings();
                 } else 
                 {
                     console.error(`Element with ID ${all_displays[i]} not found.`);
@@ -105,6 +114,82 @@ function show_all()
     }
     console.log("Show_all occurred");
 }
+
+var userAge;
+var dob;
+
+function fetch_ratings()
+{
+    console.log("Amo");
+    all_games.forEach(game =>{
+        console.log(game.Title);
+        ratings_ref = firebase.database().ref(game.Title + "/Avg_Rating");
+        ratings_ref.on("value", function(snapshot){
+            if (snapshot.exists())
+            {
+                document.getElementById(game.Title+"_rating").innerHTML = "";
+                avg_rating = snapshot.val();
+                rounded_rating = Math.floor(avg_rating);
+                rating_diff = avg_rating - rounded_rating;
+
+                if (avg_rating >= 4.75)
+                {
+                    for (i=0; i< 5; i++)
+                    {
+                        var star1 = document.createElement("i");
+                        star1.classList.add("fa");
+                        star1.classList.add("fa-star");
+                        document.getElementById(game.Title+"_rating").appendChild(star1);
+                    }
+                } else 
+                {
+                    for (j=0; j < rounded_rating; j++)
+                    {
+                        var star2 = document.createElement("i");
+                        star2.classList.add("fa");
+                        star2.classList.add("fa-star");
+                        document.getElementById(game.Title+"_rating").appendChild(star2);
+                    }
+                    if (rating_diff >= 0.25 && rating_diff < 0.75)
+                    {
+                        var star3 = document.createElement("i");
+                        star3.classList.add("fa");
+                        star3.classList.add("fa-star-half-o");
+                        document.getElementById(game.Title+"_rating").appendChild(star3);
+                    } else if (rating >= 0.75 && rating_diff < 1.0)
+                    {
+                        var star4 = document.createElement("i");
+                        star4.classList.add("fa");
+                        star4.classList.add("fa-star");
+                        document.getElementById(game.Title+"_rating").appendChild(star4);
+                    }
+                }
+
+            }
+        });
+        
+    });
+        
+}
+
+if (localStorage.getItem("Authenticated") == "yes")
+{
+    var dob_ref = firebase.database().ref("User_credentials/" + localStorage.getItem("Email: ") + "/Dob");
+    dob_ref.on("value", function(dobSnapshot){
+    dob = dobSnapshot.val();
+    
+    let today = new Date();
+        let dob_date = new Date(dob);
+        console.log(dob_date);
+        let userAge = today.getFullYear() - dob_date.getFullYear();
+        let month_difference = today.getMonth() - dob_date.getMonth();
+        if (month_difference < 0 || (month_difference === 0 && today.getDate() < dob_date.getDate())) {
+            userAge--;
+        }
+    console.log(userAge);
+    });
+}
+
 function getSelectedGenres() {
     const checkboxes = document.querySelectorAll('input[name="genre"]:checked');
     return Array.from(checkboxes).map(checkbox => checkbox.value);
@@ -229,7 +314,7 @@ if (username != "")
 
 // Function to check if a game is favorited on page load
 function checkIfFavorited() {
-    userFavoritesRef.once('value', function(snapshot) {
+    userFavoritesRef.on('value', function(snapshot) {
         let isFavorited = false;
         let i = 0;
         snapshot.forEach(function(childSnapshot) {
