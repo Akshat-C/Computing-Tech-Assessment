@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <title>GameNet</title>
 
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
@@ -18,6 +19,7 @@
 </head>
 
 <body onload="check_auth()">
+  <div id="google_translate_element" style="display:none;"></div>
 
 <div class="col-12" id="header">
 
@@ -30,7 +32,7 @@
     <div class="dropdown">
         <li id="settings_tab" class="active top_nav"><a href="settings.html" style="display: inline-block;">Settings&nbsp;<span class="fa fa-caret-down" style="margin-top: 5%;"></span></a></li>
         <div class="dropdown-content">
-          <a href="#">Accessibility</a>
+          <a href="accessibility.html">Accessibility</a>
           <a href="contact_us.html">Contact Us</a>
           <a href="about.html">About</a>
         </div>

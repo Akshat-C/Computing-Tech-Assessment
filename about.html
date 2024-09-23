@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <title>GameNet</title>
 
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
@@ -19,51 +20,53 @@
 
 <body onload="check_auth()">
 
+  <div id="google_translate_element" style="display:none;"></div>
+
 <div class="col-12" id="header">
 
 <h1 id="logo">GameNet</h1>
 <ul class="col-sm-5 col-md-6 col-lg-7" id="main_nav">
-    <li id="home_tab" class="top_nav"><a href="index.html">Home</a></li>
-    <li id="games_tab" class="top_nav"><a href="games.html">Games</a></li>
-    <li id="login_tab" class="top_nav"><a href="login.html">Login</a></li>
-    <li id="signup_tab" class="top_nav"><a href="signup.html">Sign Up</a></li>
-    <div class="dropdown">
-      <li id="settings_tab" class="active top_nav"><a href="" style="display: inline-block;">Settings&nbsp;<span class="fa fa-caret-down" style="margin-top: 5%;"></span></a></li>
+  <li id="home_tab" class="active top_nav"><a href="index.html">Home</a></li>
+  <li id="games_tab" class="top_nav"><a href="games.html">Games</a></li>
+  <li id="login_tab" class="top_nav" ><a href="login.html">Login</a></li>
+  <li id="signup_tab" class="top_nav"><a href="signup.html">Sign Up</a></li>
+  <div class="dropdown">
+      <li id="settings_tab" class=""><a href="" style="display: inline-block;">Settings&nbsp;<span class="fa fa-caret-down" style="margin-top: 5%;"></span></a></li>
       <div class="dropdown-content">
-        <a href="#">Accessibility</a>
+        <a href="accessibility.html">Accessibility</a>
         <a href="contact_us.html">Contact Us</a>
         <a href="about.html">About</a>
       </div>
     </div> 
   <div class="dropdown">
-      <li id="account_tab" class="top_nav no_dropdown"><a href="" style="display: inline-block;">Account&nbsp;<span class="fa fa-caret-down" style="margin-top: 5%;"></span></a></li>
+      <li id="account_tab" class="no_dropdown"><a href="" style="display: inline-block;">Account&nbsp;<span class="fa fa-caret-down" style="margin-top: 5%;"></span></a></li>
       <div class="dropdown-content">
         <a href="settings.html">Basic Settings</a>
         <a href="preferences.html">Preferences</a>
         <a href="your_games.html">Your Games</a>
       </div>
-    </div>
-    </ul>
+    </div> 
+  </ul>
 
 </div>
 
-<div class="container">
-<div style="background-color: #76d6ff; padding-left: 5%; padding-right: 5%; padding-bottom: 2%; margin-top: 5%;">
+<div class="container who">
+<div style="background-color: #99d7f2; padding-left: 5%; padding-right: 5%; padding-bottom: 2%; margin-top: 5%;">
 <br><h1>Who we are: </h1>
 <p>GameNet is an innovative online platform dedicated to facilitating the buying and selling of video games, providing a dynamic marketplace where gamers and developers can seamlessly connect. Designed to cater to the ever-growing gaming community, GameNet allows users to browse and purchase a vast range of game titles, from indie projects to blockbuster releases, all in one convenient location. Sellers can list their games with detailed descriptions, pricing, and promotional features, making it easy for potential buyers to find exactly what they’re looking for. With a focus on security, transparency, and user satisfaction, GameNet ensures that transactions are smooth and trustworthy, offering reliable payment processing and clear communication channels between buyers and sellers.</p>
 </div><br>
-<ul class="nav nav-tabs" id="game_detail_nav">
+<ul class="nav justify-content-center" id="document_div">
   <li class="nav-item">
-    <h1><a class="nav-link" data-bs-toggle="modal" data-bs-target="#terms_modal" style="margin-right: 10%; white-space: nowrap;">Terms and Conditions</a></h1>
+    <h1><a class="nav-link" data-bs-toggle="modal" data-bs-target="#terms_modal" style="margin-right: 10vw; white-space: nowrap;">Terms & Conditions</a></h1>
   </li>
   
   <li class="nav-item">
-    <h1><a class="nav-link" href="#hardware_requirements" style="margin-left: 10%; white-space: nowrap;">Privacy Policy</a></h1>
+    <h1><a class="nav-link" data-bs-toggle="modal" data-bs-target="#privacy_modal" style="margin-left:10w; white-space: nowrap;">Privacy Policy</a></h1>
   </li>
 </ul>
 
 <!-- The Modal -->
-<div class="modal fade" id="terms_modal">
+<div class="modal fade modal-lg" id="terms_modal">
   <div class="modal-dialog">
     <div class="modal-content">
 
@@ -120,22 +123,89 @@
         <h4> 14. Contact Information <h4>
         <h5> For questions or concerns regarding these terms, please contact us at GameNet@gmail.com. <h5>
 
+        </div>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
 
+    </div>
+  </div>
+</div>
 
+<div class="modal fade modal-lg" id="privacy_modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
 
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h3 class="modal-title">Privacy Policy</h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
 
+      <!-- Modal body -->
+      <div class="modal-body">
+        <h5>At GameNet, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our platform or use our services. Please read this policy carefully. By accessing or using GameNet, you agree to the terms outlined below.</h5> 
+        <h4>1. Information We Collect</h4>
+        <h5>We collect several types of information from users, including: <br>
+          - Personal Information: Information that identifies you as an individual, such as your name, email address, payment details, shipping address, and phone number. This is primarily collected during account registration or during transactions. <br>
+          - Non-Personal Information: Data that cannot be used to identify you, including browser type, device information, game preferences, and usage data. <br>
+          - Payment Information: We may collect and store limited payment information from you, such as payment method and transaction history. Payments are processed by third-party providers, and we do not store complete credit card or bank account details. <br>
+          - Cookies and Tracking Technologies: We use cookies and similar tracking technologies to gather usage data, enhance user experience, and track user preferences.</h5>
+        <h4>2. How We Use Your Information <h4>
+        <h5>The information we collect is used to: <br>
+          - Provide, operate, and maintain our platform. <br>
+          - Facilitate transactions, including buying and selling games. <br>
+          - Manage your account, including user verification and password resets. <br>
+          - Improve customer service by addressing inquiries and issues. <br>
+          - Personalise your experience on GameNet by providing recommendations, targeted content, and advertisements based on your interests. <br>
+          - Communicate with you about your account, transactions, platform updates, and marketing offers (if you opt-in).<br>
+          - Ensure compliance with our terms and conditions and applicable laws. </h5>
+        <h4> 3. Disclosure of Your Information <h4></h4>
+        <h5> We may share your information in the following situations: <br>
+          - With Third-Party Service Providers: We may share your information with third parties that perform services on our behalf, such as payment processors, marketing partners, data analysis firms, and customer support providers. <br>
+          - Business Transfers: If we are involved in a merger, acquisition, or asset sale, your information may be transferred as part of that transaction. <br>
+          - Compliance with Legal Obligations: We may disclose your information where required by law, in response to a legal process, or when necessary to protect the rights, property, or safety of GameNet, our users, or others.<br>
+          - With Other Users: If you post content in publicly accessible areas of GameNet, such as reviews or forums, this content may be visible to other users. Your username may be associated with this content.<h5>
           
-
-          
-
-          
-
-          
-
-          
-
-
-          
+        <h4> 4. Security of Your Information <h4>
+        <h5> We use reasonable administrative, technical, and physical measures to protect the security of your personal information. Despite our efforts, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee the absolute security of your information. <br> <h5>
+        <h5> - Password Protection: You are responsible for keeping your password confidential. We recommend using a strong password and regularly updating it. <br>
+             - Encryption: Where applicable, we use SSL (Secure Sockets Layer) encryption to protect the transmission of sensitive information. <br> <h5>
+        <h4> 5. Purchasing Games <h4>
+        <h5> - All purchases are final, and no refunds will be issued unless stated otherwise in specific circumstances, such as a game being defective or unavailable. <br>
+          - Users agree to provide accurate payment information. Any disputes regarding payments must be directed to the relevant payment processor. <br>
+          - The platform is not responsible for any issues related to game functionality, as this is the responsibility of the game developer or seller. <h5>
+        <h4> 6. Selling Games <h4>
+        <h5> - Sellers must ensure that all games listed are legal and do not infringe on the rights of any third party. <br>
+          - Sellers are responsible for ensuring the accuracy of the information provided in their game listings, including but not limited to pricing, game features, and descriptions. <br>
+          - The platform reserves the right to remove any listings that violate these terms or are deemed inappropriate or illegal. <h5>
+        <h4> 7. Fees and Payments <h4>
+        <h5> - The platform may charge fees for transactions, which will be clearly stated during the sale process. <br>
+          - Sellers agree to pay any applicable fees associated with selling games on the platform. <br>
+          - Payment processing is handled by third-party providers, and the platform is not responsible for any payment processing errors or delays. <h5>
+        <h4> 8. Intellectual Property <h4>
+        <h5> - All content on the platform, including logos, text, images, and code, is the intellectual property of GameNet or its licensors. <br>
+          - Users may not reproduce, modify, or distribute any content without express permission. <h5>
+        <h4> 9. Prohibited Activities <h4>
+        <h5> Users are prohibited from engaging in any activity that violates local laws or infringes on the rights of others, including but not limited to: <br>
+          - Selling illegal, pirated, or counterfeit games. <br>
+          - Engaging in fraudulent or deceptive practices. <br>
+          - Distributing malware, viruses, or harmful content. <br>
+          - Any user found engaging in prohibited activities may have their account suspended or permanently banned from the platform.<h5>
+        <h4> 10. Dispute Resolution <h4>
+        <h5> - Any disputes between users (e.g., buyers and sellers) should first be addressed between the parties. If no resolution is found, the platform may intervene at its discretion but does not guarantee resolution. <br>
+          - The platform reserves the right to suspend transactions or accounts pending investigation of disputes.<h5>
+        <h4> 11. Limitation of Liability <h4>
+        <h5> - The platform is provided "as is" without any warranties, either express or implied. <br>
+          - The platform is not responsible for any direct, indirect, incidental, or consequential damages resulting from the use or inability to use the platform. <h5>
+        <h4> 12. Modifications to Terms <h4>
+        <h5> The platform reserves the right to modify these terms at any time. Users will be notified of significant changes and continued use of the platform after such changes constitutes acceptance of the updated terms. <h5>
+        <h4> 13. Governing Law <h4>
+        <h5> These terms shall be governed by and construed in accordance with the laws of New South Wales. <h5>
+        <h4> 14. Contact Information <h4>
+        <h5> For questions or concerns regarding these terms, please contact us at GameNet@gmail.com. <h5>
 
         </div>
       

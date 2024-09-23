@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+
+.icon-cards {
+    position: relative;
+    width: 42.7vw;
+    height: 24vw;
+    /*max-width: 380px;
+    max-height: 250px;*/
+    margin: 0;
+    color: white;
+    perspective: 1000px;
+    transform-origin: center;
+    margin-left: 27.5vw;
+    margin-right: 27.5vw;
+}
+
+.icon_container {
+    width: 100%;
+    background-color: #153962c5;
+    padding-top: 1vw;
+    padding-bottom: 3vw;
+    border-radius: 20px;
+}
+
+.icon-cards__content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: translateZ(-30vw) rotateY(0);
+    animation: carousel 12s infinite cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+.icon-cards__content.step-animation {
+    animation: carousel 9.6s infinite steps(1) forwards;
+}
+.icon-cards__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 42.7vw;
+    height: 24vw;
+    /*max-width: 380px;
+    max-height: 250px;*/
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
+    border-radius: 6px;
+    transform-origin: center;
+}
+
+
+
+.icon-cards__item:nth-child(1) {
+    background: #fdd94f;
+    transform: rotateY(0) translateZ(35vw);
+}
+.icon-cards__item:nth-child(2) {
+    background: #f87949;
+    transform: rotateY(120deg) translateZ(35vw);
+}
+.icon-cards__item:nth-child(3) {
+    background: #fbab48;
+    transform: rotateY(240deg) translateZ(35vw);
+}
+@keyframes carousel {
+    0%, 17.5% {
+        transform: translateZ(-35vw) rotateY(0);
+   }
+    27.5%, 45% {
+        transform: translateZ(-35vw) rotateY(-120deg);
+   }
+    55%, 72.5% {
+        transform: translateZ(-35vw) rotateY(-240deg);
+   }
+    82.5%, 100% {
+        transform: translateZ(-35vw) rotateY(-360deg);
+   }
+}
+html, body {
+    height: 100%;
+}
+@keyframes jelly {
+    from {
+        transform: scale(1, 1);
+   }
+    30% {
+        transform: scale(1.25, 0.75);
+   }
+    40% {
+        transform: scale(0.75, 1.25);
+   }
+    50% {
+        transform: scale(1.15, 0.85);
+   }
+    65% {
+        transform: scale(0.95, 1.05);
+   }
+    75% {
+        transform: scale(1.05, 0.95);
+   }
+    to {
+        transform: scale(1, 1);
+   }
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h1 {
+    color:#fdd94f;
+    font-family: "Rowdies";
+    font-weight: 900;
+    font-size: 42px;
+    /*#d6e741*/
+}
