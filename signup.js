@@ -61,6 +61,8 @@ function signup()
     password = document.getElementById("signup_pw_inp").value ;
     pw_len = password.length;
 
+    email = email.replace(".", "`");
+
     has_lowcase = password.match(/[a-z]/g);
     has_upcase = password.match(/[A-Z]/g);
     has_num = password.match(/[0-9]/g);
@@ -69,12 +71,12 @@ function signup()
     var email_ref = firebase.database().ref("User_credentials");
     if (email == " " || password == " ")
     {
-      document.getElementById("error_msg").innerHTML = "*Username or password cannot be empty"
+      document.getElementById("error_msg").innerHTML = "*Email or password cannot be empty"
     } else 
     {
       email_ref.orderByKey().equalTo(email).once('value', function(existence) {
         if (existence.exists()) {
-          document.getElementById("error_msg").innerHTML = "*Username already exists";
+          document.getElementById("error_msg").innerHTML = "*Account with this email already exists";
         } else {
           if (pw_len < 8 )
               {
@@ -84,7 +86,6 @@ function signup()
                   document.getElementById("error_msg").innerHTML = "*Password Should Have Lowercase and Uppercase Characters, Numbers and Symbols";
               } else 
               {
-                  email = email.replace(/./g, ",") 
                   console.log(email);
                   console.log(password);
                   userDetails.Password = password;

@@ -5,15 +5,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
 
 body {
     background-color: #b4b4b4;
-    background-image: url("Triangle\ Purple.png");
+    background-image: url("subtle-prism.svg");
     padding-bottom: 5%;
     width: 100vw;
     margin: 0;
     padding-bottom: 3%;
-    overflow-x: hidden;
+    overflow-x:hidden;
+    zoom: normal;
+    top: 0px !important;
 
     /* #bbc3c7*/
 }
@@ -143,6 +146,18 @@ a {
     margin: auto;
 }
 
+#h1_spec {
+    font-size: 48px;
+    font-family: "Rowdies";
+    color:#cee741;
+}
+
+center h4 {
+    font-size: 24px;
+    font-family: "Outfit";
+    color:#fcfcfc;
+}
+
 #logo {
     text-align: left;
     margin-left: 15%;
@@ -151,6 +166,26 @@ a {
     font-size: 52px;
     color: #cee741;
     font-family: "Russo One";
+}
+
+a img:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+.franchise_div {
+    height: 100%;;
+}
+
+.col-6 a img {
+    height:inherit;
+    border-radius: 30px;
+}
+
+.col-6 a img:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 5px black;
+    opacity: 0.8;
 }
 
 .auth_box {
@@ -232,7 +267,7 @@ a {
     
 .game_disp {
         text-align: left; 
-        background-color: #3282B8; 
+        background-color: #60a7d6; 
         padding: 2%; 
         display: inline-block;
         height: fit-content;
@@ -256,6 +291,7 @@ a {
 
     /*#c9c9ff #E2F0CB #f0fd98*/
 }
+
 
 .btn-primary:hover {
     transform: scale(1.1);
@@ -305,7 +341,9 @@ a {
     background-color: #3860c4; 
     color: #e6e6e6;
     padding-top: 2%;
+    padding-bottom: 5%;
     border-radius: 20px;
+    height: fit-content;
 }
 
 #game_detail_info .btn-info:hover {
@@ -697,4 +735,99 @@ margin-top: -17%;
     }
     .marquee:before, .marquee:after { width: 5rem; }
   }
-  
+
+
+.who h1 {
+    font-size: 64px;
+    font-family: "Russo One";
+}
+
+.who p {
+    font-size: 18px;
+    font-family: "Prompt";
+}
+
+.who a {
+    font-size: 42px;
+    width: fit-content;
+}
+
+.who a:hover {
+    transform: scale(1.15);
+    background-color: #1e2b33;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 5px 5px 2px #577c95;
+}
+
+#document_div {
+    background-color: #304451;
+    padding-top: 1vw;
+    border-radius: 20px;
+    padding-bottom: 0.5vw;
+}
+
+.who .modal-content {
+    background-color: #ffffff;
+}
+
+#terms_modal .modal-title {
+    font-family: "Lexend";
+    text-align: center;
+}
+
+#terms_modal h3 {
+    font-size: 36px;
+    text-align: center;
+}
+
+#terms_modal h4 {
+    font-size: 24px;
+    font-family: "Varela Round";
+    font-weight: 600;
+}
+
+#terms_modal h5 {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Outfit";
+}
+
+#privacy_modal .modal-title {
+    font-family: "Lexend";
+    text-align: center;
+}
+
+#privacy_modal h3 {
+    font-size: 36px;
+    text-align: center;
+}
+
+#privacy_modal h4 {
+    font-size: 24px;
+    font-family: "Varela Round";
+    font-weight: 600;
+}
+
+#privacy_modal h5 {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Outfit";
+}
+
+#goog-gt-tt {
+    display: none !important;
+}
+
+/* Hide the Google Translate dropdown */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+.skiptranslate {
+    display: none;
+}
