@@ -9,13 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 
-    <script src="main.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script defer src="main.js"></script>
     <script defer src="interactive.js"></script>
     <title>GameNet</title>
 
 </head>
 
 <body onload="check_auth()"> 
+
+  <div id="google_translate_element" style="display:none;"></div>
 
 <div class="" id="header">
 <h1 id="logo">GameNet</h1>
@@ -27,7 +30,7 @@
     <div class="dropdown">
         <li id="settings_tab" class=""><a href="" style="display: inline-block;">Settings&nbsp;<span class="fa fa-caret-down" style="margin-top: 5%;"></span></a></li>
         <div class="dropdown-content">
-          <a href="#">Accessibility</a>
+          <a href="accessibility.html">Accessibility</a>
           <a href="contact_us.html">Contact Us</a>
           <a href="about.html">About</a>
         </div>
@@ -57,7 +60,7 @@
 
 </div>--><br>
 <div class="justify-content-center mx-auto">
-  <h1 style="margin-left: 40vw;">Trending Now</h1>
+  <h1 style="margin-left: 40vw;" id="h1_spec">Trending Now</h1>
   <br>
     <div class="marquee">
         <ul class="marquee-content">
@@ -68,9 +71,63 @@
             <li><a href="rdr2_detail.html"><img src="RDR2 Carousel.jpg" alt="Image 5"></a></li>
             <!-- Add more images as needed -->
         </ul>
-    </div>
-</div>
+    </div><br>
 
+<div style="background-color: #a5cff9; margin-left: 5vw; margin-right: 5vw; text-align: center; padding: 2vw; border-radius: 20px;">
+  <h1 id="h1_spec" style="color:#1e2b33">Browse by Franchise:</h1><br>
+  <div class="col-12 row">
+    <div class="col-6"><a class="franchise_div" href="minecraft_franchise.html"><img src="Minecraft Franchise.png" alt="" class="col-9"></a></div>
+    <div class="col-6"><a class="franchise_div" href="ea_franchise.html"><img src="EA Franchise.png" alt="" class="col-9"></a></div>
+  </div><br><br>
+  <div class="col-12 row">
+    <div class="col-6"><a class="franchise_div" href="epic_franchise.html"><img src="Epic Franchise.png" alt="" class="col-9"></a></div>
+    <div class="col-6"><a class="franchise_div" href="forza_franchise.html"><img src="Forza Franchise.png" alt="" class="col-9"></a></div>
+  </div>
+</div><br>
+
+<center><h1 id="h1_spec">Special Games</h1>
+<h4>These are the games created by some of the creators of the website concerned with cybersecurity.</h4></center><br>
+
+<div class="col-12 row" style="margin-left: 0.2vw;"><center>
+  <div class="game_disp" style="margin-right: 1vw; width: 31vw;">
+    <div style="float: left;" class="col-6">
+      <button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="Cybersaver"></button>
+      <h5 class="game_title_games" style="white-space: normal; font-size: 20px;">Cyber Saver</h4><img src="Cyber_Saver Display.png" class="game_disp_img"><br>
+    </div>
+    <div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6">
+      <h5>Popularity:</h5><span id="Cybersaver_rating">No Reviews Yet</span><br><br>
+      <h5 style="margin-left: 1vw;">Age Rating: Everyone</h5><br>
+      <h5>Free</h5><br>
+      <a href="https://scratch.mit.edu/projects/973744695" target="_blank"><button class="btn btn-primary">View Game</button></a>
+    </div>
+  </div>
+  <div class="game_disp" style="margin-right: 1vw; width: 31vw;">
+    <div style="float: left;" class="col-6">
+      <button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="Passguard"></button>
+      <h5 class="game_title_games" style="white-space: normal; font-size: 20px;">PassGuard Quest</h4><img src="Pass_Quest Display.png" class="game_disp_img"><br>
+    </div>
+    <div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6">
+      <h5>Popularity:</h5><span id="Passguard_rating">No Reviews Yet</span><br><br>
+      <h5 style="margin-left: 1vw;">Age Rating: Everyone</h5><br>
+      <h5>Free</h5><br>
+      <a href="https://scratch.mit.edu/projects/1021441361" target="_blank"><button class="btn btn-primary">View Game</button></a>
+    </div>
+  </div>
+  <div class="game_disp" style="margin-right: 1vw; width: 31vw;">
+    <div style="float: left;" class="col-6">
+      <button class="btn icon_btn fa fa-heart-o" onclick="favourite(this)" id="Cybersaviour"></button>
+      <h5 class="game_title_games" style="white-space: normal; font-size: 20px;">Cyber Saviour</h4><img src="Cybersaviour Displau.png" class="game_disp_img"><br>
+    </div>
+    <div style="float: right; padding-top: 5%; text-align: center; margin-top: 5%;" class="col-6">
+      <h5>Popularity:</h5><span id="Cybersaviour_rating">No Reviews Yet</span><br><br>
+      <h5 style="margin-left: 1vw;">Age Rating: Everyone</h5><br>
+      <h5>Free</h5><br>
+      <a href="https://scratch.mit.edu/projects/1036077873" target="_blank"><button class="btn btn-primary">View Game</button></a>
+    </div>
+  </div>
+</div></center>
+
+</div>
 </body>
 
 </html>

@@ -1,0 +1,271 @@
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="detail_img.css">
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <title>GameNet</title>
+
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    <script src="main.js"></script>
+    <script defer src="interactive.js"></script>
+
+    <script>
+      localStorage.setItem("Game Page", "F_Motorsport");
+    </script>
+
+    <style>
+      .column {
+        width: 16.6%;
+      }
+    </style>
+
+  <script src="game_detail.js"></script>
+
+</head>
+
+<body onload="check_auth()">
+  <div id="google_translate_element" style="display:none;"></div>
+
+<div class="" id="header">
+
+<h1 id="logo">GameNet</h1>
+<ul class="col-sm-5 col-md-6 col-lg-7" id="main_nav">
+  <li id="home_tab" class="active top_nav"><a href="index.html">Home</a></li>
+  <li id="games_tab" class="top_nav"><a href="games.html">Games</a></li>
+  <li id="login_tab" class="top_nav" ><a href="login.html">Login</a></li>
+  <li id="signup_tab" class="top_nav"><a href="signup.html">Sign Up</a></li>
+  <div class="dropdown">
+      <li id="settings_tab" class=""><a href="" style="display: inline-block;">Settings&nbsp;<span class="fa fa-caret-down" style="margin-top: 5%;"></span></a></li>
+      <div class="dropdown-content">
+        <a href="accessibility.html">Accessibility</a>
+        <a href="contact_us.html">Contact Us</a>
+        <a href="about.html">About</a>
+      </div>
+    </div> 
+  <div class="dropdown">
+      <li id="account_tab" class="no_dropdown"><a href="" style="display: inline-block;">Account&nbsp;<span class="fa fa-caret-down" style="margin-top: 5%;"></span></a></li>
+      <div class="dropdown-content">
+        <a href="settings.html">Basic Settings</a>
+        <a href="preferences.html">Preferences</a>
+        <a href="your_games.html">Your Games</a>
+      </div>
+    </div> 
+  </ul>
+
+</div>
+
+<div style="padding: 2%;">
+<div class="col-12 row">   
+    <div class="col-7">
+      <div class="container">
+
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+            <img src="F_Motorsport Carousel.webp" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+            <img src="F_Motorsport Gameplay1.jpg" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+            <img src="F_Motorsport Gameplay2.jpg" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+            <img src="F_Motorsport Win.jpg" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+            <img src="F_Motorsport Buy.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+            <img src="F_Motorsport Upgrade.jpg" style="width:100%">
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+        <!-- Image text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="F_Motorsport Carousel.webp" style="width:100%" onclick="currentSlide(1)">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="F_Motorsport Gameplay1.jpg" style="width:100%" onclick="currentSlide(2)">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="F_Motorsport Gameplay2.jpg" style="width:100%" onclick="currentSlide(3)">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="F_Motorsport Win.jpg" style="width:100%" onclick="currentSlide(4)">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="F_Motorsport Buy.jpg" style="width:100%" onclick="currentSlide(5)">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="F_Motorsport Upgrade.jpg" style="width:100%" onclick="currentSlide(6)">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3" id="game_detail_info">
+
+        <center><h1 style="color: #CDDC39;">Forza Motorsport 8: </h1></center><br>
+        <h4 class="game_detail_text" id="review_display">No reviews yet. </h4><br>
+        <h4 class="game_detail_text">Age Rating: G <span type="button" style="font-size: 22px; font-weight: bold; color: #dad5d5" data-bs-toggle="modal" data-bs-target="#age_modal">ⓘ</span> | Everyone</h4><br>
+        <center><h4 class="price_display">Price: $119.95</h4><br>
+        
+            <button class="btn btn-info redirection_btn" style="margin-left: 6%;"><a href="https://www.xbox.com/en-AU/games/forza-motorsport#purchaseoptions" target="_blank">Buy Game</a></button><br><br>
+        </center>
+
+    </div><br>
+
+</div><br>
+</div>
+
+<!-- The Modal -->
+<div class="modal fade" id="age_modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Forza Motorsport 8 Rating: </h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="col-12 row">
+            <img src="G.png" class="col-6">
+            <h4 class="col-6" style="font-size: 32px;">General</h4>
+          </div>
+          <br>
+          <h4>This game is suitable for all ages.</h4>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+</div>
+
+<div class="sticky-top">
+<ul class="nav nav-tabs justify-content-center" id="game_detail_nav">
+    <li class="nav-item" style="padding-right: 20%;">
+      <a class="nav-link" href="#description">Description</a>
+    </li>
+    <li class="nav-item" style="padding-right: 20%;">
+      <a class="nav-link" href="#hardware_requirements">Hardware Requirements</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#popularity">Popularity</a>
+    </li>
+  </ul>
+</div>
+
+<div style="margin-top: 2%;background-color: #e3ebf3cb;" id="content_div">
+
+    <div id="description">
+    <br><br><br><br>
+    <h2>Description</h2>
+    <h3>What is Minecraft?</h3>
+    <h6 class="description_text"> Forza Motorsport 8 is a cutting-edge racing simulation game that immerses players in the thrilling world of motorsport, featuring a stunning array of licensed cars and meticulously detailed tracks from around the globe. Building on the franchise’s legacy, the game offers a highly realistic driving experience with advanced physics, dynamic weather conditions, and an expansive car customization system. Players can engage in various modes, including single-player campaigns and competitive online races, all while enjoying breathtaking graphics and audio that enhance the immersion. With a focus on accessibility and depth, Forza Motorsport 8 caters to both casual gamers and hardcore racing enthusiasts, making it a standout title in the racing genre. </h6><br>
+    <h3>Why to play it?</h3>
+    <h5 class="description_text"> Forza Motorsport 8 is a good and fun game because it delivers an unparalleled racing experience that combines realism with accessibility. The advanced physics engine and dynamic weather effects create a thrilling and immersive atmosphere, allowing players to feel the nuances of each vehicle's handling. The extensive customization options enable players to fine-tune their cars to suit their driving styles, enhancing the sense of ownership and strategy. With a variety of race modes and stunning visuals, the game keeps players engaged, whether they’re racing against friends online or tackling challenging single-player events. The attention to detail and commitment to providing a rich, enjoyable racing experience make Forza Motorsport 8 a must-play for car enthusiasts and gamers alike. </h5><hr>
+    </div>
+    <div id="hardware_requirements">
+      <br><br><br><br>
+    <h2>Hardware Requirements</h2>
+        <h5>Minimum Requirements:</h5>
+    <div class="col-7">
+        <p>CPU: AMD Ryzen 5 1600 Intel Core i5-8400 </p>
+        <p>RAM: 8GB </p>
+        <p>GPU: AMD Radeon RX 5500 XT or Nvidia GeForce GTX 1060 </p>
+        <p>Storage: 130GB </p>
+        <p>OS: Windows 10 64-bit </p>  
+      </div>
+      <div class="col-6">
+          <h5>Recommended Requirements:</h5>
+          <div class="col-7">
+          <p>CPU: AMD Ryzen 5 5600X Intel Core i5-11600K</p>
+          <p>RAM: 16GB </p>
+          <p>GPU: AMD RX 6800 XT or Nvidia GeForce RTX 2080 Ti </p>
+          <p>Storage: 130GB </p>
+          <p>OS: Windows 10 64-bit </p>
+      </div>
+    </div><hr>
+
+    <div id="popularity" style="padding: 0;">
+    <h2>Popularity</h2>
+    <p id="avg_rating">No Reviews Yet!</p>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#review_modal">Write a Review</button>
+    </div><br>
+
+<!-- The Modal -->
+<div class="modal fade" id="review_modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Write a Review:  </h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <h4>Star Rating: </h4>
+          <button class="btn btn-warning" id="star1" onclick="star1()">1 Star</button>
+          <button class="btn btn-warning" id="star2" onclick="star2()">2 Stars</button>  
+          <button class="btn btn-warning" id="star3" onclick="star3()">3 Stars</button>  
+          <button class="btn btn-warning" id="star4" onclick="star4()">4 Stars</button>  
+          <button class="btn btn-warning" id="star5" onclick="star5()">5 Stars</button>
+          <br><br>
+          <h4>Tell us more: </h4>
+          <textarea class="form-control" rows="5" placeholder="What is good about the game? What is not so good?" id="review_text"></textarea><br>
+          <button class="btn btn-success" onclick="write_review()">Write Review</button>
+          <div style="display: none;" id="review_success"><br><div class="alert alert-success fade show">Your review was added successfully</div></div>
+        </div> 
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+</div>
+
+<div id="review_disp" class="container col-12 justify-content-left"></div>
+ 
+</body>
+
+</html>

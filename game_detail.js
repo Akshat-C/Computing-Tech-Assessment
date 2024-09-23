@@ -28,11 +28,11 @@ const firebaseConfig = {
 
 var current_page = localStorage.getItem("Game Page");
 
-  var reviewsRef = firebase.database().ref(localStorage.getItem("Game Page"));
+var reviewsRef = firebase.database().ref(localStorage.getItem("Game Page"));
 
-  fetchReviews();
+fetchReviews();
 
-  reviewsRef.on("child_added", function(snapshot) {
+  /*reviewsRef.on("child_added", function(snapshot) {
     fetchReviews();
   });
 
@@ -42,7 +42,7 @@ var current_page = localStorage.getItem("Game Page");
 
   reviewsRef.on("child_removed", function(snapshot) {
     fetchReviews();
-  });
+  });*/
 
   function btn_select(id, id1, id2, id3, id4)
 {
@@ -140,8 +140,8 @@ function fetchReviews()
       // Fetching each user's review data
       var reviewData = childSnapshot.val();
       var rating = reviewData.Rating;       // Fetch rating
-      console.log(rating);
-      var date = reviewData.Date;           // Fetch date
+      if (rating !== undefined){
+        var date = reviewData.Date;           // Fetch date
       var description = reviewData.Description; // Fetch description
 
       total_rating += rating;
@@ -177,15 +177,55 @@ function fetchReviews()
 
       // Append the review div to the main reviews container
       document.getElementById("review_disp").appendChild(reviewDiv);
+      }
+      
     });
     avg_rating = review_count > 0 ? (total_rating / review_count).toFixed(2) : 0;
     console.log(avg_rating);
+    rounded_rating = Math.floor(avg_rating);
+    rating_diff = avg_rating - rounded_rating;
 
-  if (avg_rating > 0 && avg_rating <= 5)
-  {
-    avgRef.set(avg_rating);
-    document.getElementById("avg_rating").innerHTML = avg_rating;
-  }
+    if (avg_rating != 0){
+      document.getElementById("avg_rating").innerHTML = "";
+      document.getElementById("review_display").innerHTML = "";
+    }
+
+    if (avg_rating >= 4.75)
+    {
+        for (i=0; i< 5; i++)
+        {
+            var star1 = document.createElement("i");
+            star1.classList.add("fa");
+            star1.classList.add("fa-star");
+            document.getElementById("avg_rating").appendChild(star1);
+            document.getElementById("review_display").appendChild(star1);
+        }
+    } else 
+    {
+        for (j=0; j < rounded_rating; j++)
+        {
+            var star2 = document.createElement("i");
+            star2.classList.add("fa");
+            star2.classList.add("fa-star");
+            document.getElementById("avg_rating").appendChild(star2);
+            document.getElementById("review_display").appendChild(star2);
+        }
+        if (rating_diff >= 0.25 && rating_diff < 0.75)
+        {
+            var star3 = document.createElement("i");
+            star3.classList.add("fa");
+            star3.classList.add("fa-star-half-o");
+            document.getElementById("avg_rating").appendChild(star3);
+            document.getElementById("review_display").appendChild(star3);
+        } else if (rating_diff >= 0.75 && rating_diff < 1.0)
+        {
+            var star4 = document.createElement("i");
+            star4.classList.add("fa");
+            star4.classList.add("fa-star");
+            document.getElementById("avg_rating").appendChild(star4);
+            document.getElementById("review_display").appendChild(star4);
+        }
+    }
   }, function(error) {
     console.error('Error fetching reviews:', error);
   });
